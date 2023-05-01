@@ -6,7 +6,7 @@ AddEventHandler('DX-CastNet:DXHIGH:UseItem', function()
     if IsEntityInWater(GetPlayerPed(-1)) then
         TriggerEvent('DX-CastNet:DXHIGH:Loading')
     else
-        exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'], Lang[DXHIGH.lang]['Youmustbeinwakewater'], TIME, 'error')
+        exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'], Lang[DXHIGH.lang]['Youmustbeinwakewater'], TIME, 'error')
     end
 end)
 
@@ -30,11 +30,11 @@ AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
                 TriggerServerEvent('DX-CastNet:DXHIGH:RemoveItem')
                 CancelFishing()
             else
-                exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'],Lang[DXHIGH.lang]['gotnothing'], TIME, 'error')
+                exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'],Lang[DXHIGH.lang]['gotnothing'], TIME, 'error')
                 CancelFishing()
             end
         else
-            exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'], Lang[DXHIGH.lang]['doit'], 5000, 'error')
+            exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'], Lang[DXHIGH.lang]['doit'], 5000, 'error')
         end
     else
         if RandomGive > DXHIGH.PercentGive then
@@ -43,7 +43,7 @@ AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
             TriggerServerEvent('DX-CastNet:DXHIGH:RemoveItem')
             CancelFishing()
         else
-            exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'],Lang[DXHIGH.lang]['gotnothing'], TIME, 'error')
+            exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'],Lang[DXHIGH.lang]['gotnothing'], TIME, 'error')
             CancelFishing()
         end
     end
@@ -55,14 +55,14 @@ function Anim_1()
     ESX.Streaming.RequestAnimDict("anim@arena@celeb@flat@solo@no_props@", function()
         TaskPlayAnim(PlayerPedId(), "anim@arena@celeb@flat@solo@no_props@", "slugger_a_player_a", 8.0, -8, -1, 49, 0, 0, 0, 0)
         Citizen.Wait(TIME)
-        exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'], Lang[DXHIGH.lang]['doing'], TIME, 'success')
+        exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'], Lang[DXHIGH.lang]['doing'], TIME, 'success')
         ClearPedTasks(GetPlayerPed(-1))
         Citizen.Wait(500)
     end)
 end
 
 function Anim_2()
-    exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'], Lang[DXHIGH.lang]['dragging'], TIME, 'info')
+    exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'], Lang[DXHIGH.lang]['dragging'], TIME, 'info')
     Citizen.Wait(500)
     ESX.Streaming.RequestAnimDict("random@mugging4", function()
         TaskPlayAnim(PlayerPedId(), "random@mugging4", "struggle_loop_b_thief", 8.0, -8, -1, 49, 0, 0, 0, 0)
@@ -74,7 +74,7 @@ end
 
 function Anim_3()
     Citizen.Wait(500)
-    exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['TITLE'], Lang[DXHIGH.lang]['test'], TIME, 'info')
+    exports['okokNotify']:Alert(Lang[DXHIGH.Lang]['title'], Lang[DXHIGH.lang]['test'], TIME, 'info')
     ESX.Streaming.RequestAnimDict("move_m@_idles@shake_off", function()
         TaskPlayAnim(PlayerPedId(), "move_m@_idles@shake_off", "shakeoff_1", 8.0, -8, -1, 49, 0, 0, 0, 0)
         Citizen.Wait(TIME)
