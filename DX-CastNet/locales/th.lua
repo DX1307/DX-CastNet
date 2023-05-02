@@ -5,6 +5,7 @@ Lang['th'] = {
     -- title okoknotify
     ['title'] = 'ทอดแห',
     -- Client
+    ['Youarenotinthezone'] = 'คุณไม่ได้อยยู่ในโซน',
 	['Youmustbeinwakewater'] = 'คุณต้องอยู่ในน้ำตื่น',
     ['gotnothing'] = 'โถ่ ไม่ได้อะไรเลย!',
     ['doit'] = 'มึง ทอดเเห เป็นเปล่าเนี้ยะ',
