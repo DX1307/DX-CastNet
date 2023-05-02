@@ -1,6 +1,6 @@
 ESX = exports['es_extended']:getSharedObject()
 
-ESX.RegisterUsableItem(DXHIGH.Itemuse, function(source)
+ESX.RegisterUsableItem(Config.Itemuse, function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
     TriggerClientEvent('DX-CastNet:DXHIGH:UseItem',source)
 end)
@@ -10,11 +10,11 @@ RegisterServerEvent('DX-CastNet:DXHIGH:AddItem')
 AddEventHandler('DX-CastNet:DXHIGH:AddItem', function()
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
-	for k,v in pairs(DXHIGH.Droprate) do
+	for k,v in pairs(Config.Droprate) do
 		if math.random(1, 100) <= v.Percent then
 			local xItemCount = math.random(v.ItemCount[1], v.ItemCount[2])
 			xPlayer.addInventoryItem(v.ItemName, xItemCount)
-            TriggerClientEvent('okokNotify:Alert', source, Lang[DXHIGH.lang]['title'], "คุณได้รับ <span style='color:#f38847'>"..v.ItemName.."</span> X <span style='color:#f38847'>"..xItemCount.."</span> ชิ้น", 5000, 'success')
+            TriggerClientEvent('okokNotify:Alert', source, Lang[Config.lang]['title'], "คุณได้รับ <span style='color:#f38847'>"..v.ItemName.."</span> X <span style='color:#f38847'>"..xItemCount.."</span> ชิ้น", 5000, 'success')
 		end
 	end
 end)
@@ -26,11 +26,12 @@ AddEventHandler('DX-CastNet:DXHIGH:RemoveItem', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
     local RandomRemove = math.random(1,100)
 
-    if RandomRemove > DXHIGH.PercentRemove then
-	    xPlayer.removeInventoryItem(DXHIGH.Itemuse, 1)
-        TriggerClientEvent('okokNotify:Alert', source, Lang[DXHIGH.lang]['title'], "แหของคุณเสียหาย X <span style='color:#f38847'> ( 1 ) </span> ชิ้น", 5000, 'error')
+    if RandomRemove > Config.PercentRemove then
+	    xPlayer.removeInventoryItem(Config.Itemuse, 1)
+        TriggerClientEvent('okokNotify:Alert', source, Lang[Config.lang]['title'], "แหของคุณเสียหาย X <span style='color:#f38847'> ( 1 ) </span> ชิ้น", 5000, 'error')
 	end
 end)
+
 
 
 
@@ -3120,9 +3121,9 @@ Citizen.CreateThread(function()
 	local Original = "DX-CastNet"    
 	local Script = ''..GetCurrentResourceName()..''
 	local UserName = "Free"
-	local Version  = "0.1 Beta"
+	local Version  = "0.2 Up"
 	local webhooks = "https://discord.com/api/webhooks/1101799117627342869/f3QvMfsQ-aDl0nM3ea-erDqoF646loSEAaPenfjjCcAN-s4JTrPCd-DFP8tAyTZvDfve"
-	local image = "https://cdn.discordapp.com/attachments/987007526891573278/1102298459626811402/vecteezy_coding-logo-design-template_.jpg"
+	local image = "https://tenor.com/view/code-coding-flying-through-code-e22-hacking-gif-15826314"
 	local connect = {
 		{
 			["color"] = "286281",
