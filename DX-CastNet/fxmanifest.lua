@@ -1,6 +1,6 @@
 fx_version "cerulean"
 game "gta5"
-version "0.1 Beta"
+version "0.2 Up"
 description 'Developed by ! D X H I G H#1999'
 
 shared_scripts {
