@@ -3,6 +3,9 @@
 
 - YT : https://youtu.be/_6h7B6WVbmA
 
+# เเจ้งบัค
+DC : https://discord.gg/vQqnzv9ygM
+
 # อ่านก่อน
 # สคริปที่ต้องใช้
 + okokNotify
