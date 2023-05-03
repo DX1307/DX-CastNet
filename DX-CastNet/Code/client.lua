@@ -7,11 +7,12 @@ Citizen.CreateThread(function()
         local sleep = 7
         local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
         local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, Config.Zonefish.location.x, Config.Zonefish.location.y, Config.Zonefish.location.z)
-        if 
+        if Config.Zonefish.EnableMarker then
             if dist <= Config.Zonefish.range + 15 then
                 DrawMarker(28,Config.Zonefish.location.x, Config.Zonefish.location.y, Config.Zonefish.location.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Zonefish.range, Config.Zonefish.range, Config.Zonefish.range, Config.Zonefish.Marker_R, Config.Zonefish.Marker_G, Config.Zonefish.Marker_B,  Config.Zonefish.Blips_Alpha, false, true, 2, false, false, false, false)
                 sleep = 7
             end
+        end
         Citizen.Wait(sleep)
     end
 end)
