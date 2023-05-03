@@ -5,6 +5,12 @@ Config.Itemuse = 'fishing_net' -- ไอเทมกดใช้
 Config.PercentGive = 50 -- เปอร์เซ็นที่จะได้รับของ Droprate
 Config.PercentRemove = 50 -- เปอร์เซ็น แห พัง
 
+Config.MiniGame = { -- easy = ช้า // medium = เร็ว // hard = เร็วมากกก
+    Mini_one = 'easy',
+    Mini_two = 'medium',
+    Mini_Three = 'hard',
+    MimiSkillCheck = {'w', 'a', 's', 'd'}, -- RanDom Key
+}
 
 Config.Zonefish = {
     -- Zone
