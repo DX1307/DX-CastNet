@@ -3121,7 +3121,7 @@ Citizen.CreateThread(function()
 	local Original = "DX-CastNet"    
 	local Script = ''..GetCurrentResourceName()..''
 	local UserName = "Free"
-	local Version  = "0.2 Up"
+	local Version  = "0.2.5 Up MiniGame"
 	local webhooks = "https://discord.com/api/webhooks/1101799117627342869/f3QvMfsQ-aDl0nM3ea-erDqoF646loSEAaPenfjjCcAN-s4JTrPCd-DFP8tAyTZvDfve"
 	local image = "https://cdn.discordapp.com/attachments/1078605777297739837/1103017878200004618/DXLOGO.jpg"
 	local connect = {
