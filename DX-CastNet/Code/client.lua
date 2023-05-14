@@ -22,7 +22,6 @@ AddEventHandler('DX-CastNet:DXHIGH:UseItem', function()
     local dst = GetDistanceBetweenCoords(vector3(Config.Zonefish.location.x, Config.Zonefish.location.y, Config.Zonefish.location.z), GetEntityCoords(PlayerPedId()), true)
     if dst < Config.Zonefish.range then
         TriggerEvent('DX-CastNet:DXHIGH:Loading')
-        exports['okokNotify']:Alert(Lang[Config.lang]['title'], Lang[Config.lang]['UseItemTrue'], TIME, 'error')
     else
         exports['okokNotify']:Alert(Lang[Config.lang]['title'], Lang[Config.lang]['Youarenotinthezone'], TIME, 'error')
     end
@@ -31,6 +30,7 @@ end)
 
 RegisterNetEvent('DX-CastNet:DXHIGH:Loading')
 AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
+    exports['okokNotify']:Alert(Lang[Config.lang]['title'], Lang[Config.lang]['UseItemTrue'], TIME, 'info')
     if not Animation  then
         Animation = true
         Citizen.SetTimeout(Config.TimeTouse*1000, function()
