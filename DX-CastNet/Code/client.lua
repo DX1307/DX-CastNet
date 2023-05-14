@@ -30,8 +30,8 @@ end)
 
 RegisterNetEvent('DX-CastNet:DXHIGH:Loading')
 AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
-    exports['okokNotify']:Alert(Lang[Config.lang]['title'], Lang[Config.lang]['UseItemTrue'], TIME, 'info')
     if not Animation  then
+        exports['okokNotify']:Alert(Lang[Config.lang]['title'], Lang[Config.lang]['UseItemTrue'], TIME, 'info')
         Animation = true
         Citizen.SetTimeout(Config.TimeTouse*1000, function()
             local RandomGive = math.random(1,100)
