@@ -3121,13 +3121,13 @@ Citizen.CreateThread(function()
 	local Original = "DX-CastNet"    
 	local Script = ''..GetCurrentResourceName()..''
 	local UserName = "Free"
-	local Version  = "0.2.5 Up MiniGame"
+	local Version  = "version 0.3 Fix System"
 	local webhooks = "https://discord.com/api/webhooks/1101799117627342869/f3QvMfsQ-aDl0nM3ea-erDqoF646loSEAaPenfjjCcAN-s4JTrPCd-DFP8tAyTZvDfve"
 	local image = "https://cdn.discordapp.com/attachments/1078605777297739837/1103017878200004618/DXLOGO.jpg"
 	local connect = {
 		{
 			["color"] = "286281",
-			["description"] = '❗️ **ประเทศที่ใช้สคริปต์ :** '..GetConvar("sv_hostname","Unknown")..' \n❗️ **ชื่อสคริปต์ต้นฉบับ :** '..Original..' \n❗️ **ชื่อสคริปต์ปัจจุบัน :** '..Script..' \n❗️ **ประเภทของสคริปต์ :** '..UserName..' \n❗️ **เวอร์ชั่น :** '..Version..'',   
+			["description"] = '🌎 **ประเทศที่ใช้สคริปต์ :** '..GetConvar("sv_hostname","Unknown")..' \n🔥 **ชื่อสคริปต์ต้นฉบับ :** '..Original..' \n🌟 **ชื่อสคริปต์ปัจจุบัน :** '..Script..' \n🌟 **ประเภทของสคริปต์ :** '..UserName..' \n👨‍💻 **เวอร์ชั่น :** '..Version..'',   
 			["image"] = {
 				["url"] = ''..image..'',
 			},
