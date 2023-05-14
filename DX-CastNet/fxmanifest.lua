@@ -1,6 +1,6 @@
 fx_version "cerulean"
 game "gta5"
-version "0.2.5 Up MiniGame"
+version "0.3 Fix System"
 description 'Developed by ! D X H I G H#1999'
 
 shared_scripts {
