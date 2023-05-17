@@ -45,7 +45,7 @@ AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
             if Config.EnableSkillCheck then
                 local success = lib.skillCheck({Config.MiniGame.Mini_one, Config.MiniGame.Mini_two, {areaSize = 60, speedMultiplier = 2}, Config.MiniGame.Mini_Three}, Config.MiniGame.MimiSkillCheck)
                 if success then 
-                    if RandomGive > Config.PercentGive then
+                    if RandomGive >= Config.PercentGive then
                         TriggerServerEvent('DX-CastNet:DXHIGH:AddItem')
                         Citizen.Wait(800)
                         TriggerServerEvent('DX-CastNet:DXHIGH:RemoveItem')
@@ -59,7 +59,7 @@ AddEventHandler('DX-CastNet:DXHIGH:Loading', function()
                     CancelFishing()
                 end
             else
-                if RandomGive > Config.PercentGive then
+                if RandomGive >= Config.PercentGive then
                     TriggerServerEvent('DX-CastNet:DXHIGH:AddItem')
                     Citizen.Wait(800)
                     TriggerServerEvent('DX-CastNet:DXHIGH:RemoveItem')
