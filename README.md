@@ -10,6 +10,7 @@ DX-CastNet
 # สคริปที่ต้องใช้
 + okokNotify
 + ox_lib / ใน Githud -- ถ้าไม่ใช้ให้ -- ใน fxmanifest.lua ด้วย เปิดปิด มินิเกมใน config DXHIGH.EnableSkillCheck = true -- ปิดเปิด มินิเกม
++ มินิเกม - https://github.com/overextended/ox_lib
 
 
 # เเนะนำ / คำเตือน
