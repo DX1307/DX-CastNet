@@ -26,7 +26,7 @@ AddEventHandler('DX-CastNet:DXHIGH:RemoveItem', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
     local RandomRemove = math.random(1,100)
 
-    if RandomRemove > Config.PercentRemove then
+    if RandomRemove >= Config.PercentRemove then
 	    xPlayer.removeInventoryItem(Config.Itemuse, 1)
         TriggerClientEvent('okokNotify:Alert', source, Lang[Config.lang]['title'], "แหของคุณเสียหาย X <span style='color:#f38847'> ( 1 ) </span> ชิ้น", 5000, 'error')
 	end
